@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Tyo Febrian - Portofolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#1E3E62',
+                        },
+                        gold: {
+                            400: '#F1C40F',
+                            500: '#D4AF37',
+                            600: '#AA7C11',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-xl font-bold tracking-tight text-navy-900">
+                    TYO<span class="text-gold-500">.</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                    <a href="#about" class="hover:text-gold-600 transition-colors">Tentang Saya</a>
+                    <a href="#experience" class="hover:text-gold-600 transition-colors">Pengalaman</a>
+                    <a href="#skills" class="hover:text-gold-600 transition-colors">Keahlian</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-900 transition-all shadow-sm">Hubungi Saya</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-navy-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#about" class="block text-slate-600 hover:text-gold-600 font-medium">Tentang Saya</a>
+            <a href="#experience" class="block text-slate-600 hover:text-gold-600 font-medium">Pengalaman</a>
+            <a href="#skills" class="block text-slate-600 hover:text-gold-600 font-medium">Keahlian</a>
+            <a href="#contact" class="block text-center py-2 rounded-lg bg-navy-900 text-white font-medium">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 text-gold-600 text-sm font-semibold border border-gold-500/20">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span> S1 Teknik Sipil • Profesional & Analitis
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 tracking-tight leading-tight">
+                    Halo, Saya <br class="hidden sm:inline"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-navy-900 via-navy-800 to-gold-600">Muhammad Tyo Febrian</span>
+                </h1>
+                <p class="text-lg text-slate-600 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                    Lulusan Teknik Sipil yang berdedikasi tinggi, teliti, dan terbiasa mengelola proyek secara terstruktur serta berbasis data. Siap berkontribusi secara profesional.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-navy-900 text-white font-medium hover:bg-gold-500 hover:text-navy-900 shadow-lg shadow-navy-900/10 transition-all duration-300 text-center">
+                        Hubungi Saya <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                    <a href="#experience" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-medium hover:border-gold-500 hover:text-gold-600 transition-all duration-300 text-center">
+                        Lihat Pengalaman
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Card / Profile Container -->
+            <div class="flex-1 flex justify-center w-full max-w-md">
+                <div class="relative w-full aspect-square max-w-[340px] rounded-3xl bg-gradient-to-br from-navy-900 to-navy-800 p-2 shadow-2xl">
+                    <div class="w-full h-full rounded-[22px] bg-slate-100 overflow-hidden relative flex items-center justify-center border border-white/10">
+                        <div class="text-center p-8">
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-500 text-4xl border border-gold-500/30">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">M. Tyo Febrian</h3>
+                            <p class="text-sm text-slate-500 font-medium mt-1">Padang, Sumatera Barat</p>
+                            <div class="mt-4 pt-4 border-t border-slate-200 flex justify-center gap-3 text-xs font-semibold text-slate-600">
+                                <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-200/60">IPK 3.41</span>
+                                <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-200/60">S1 Teknik Sipil</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Status Badge -->
+                    <div class="absolute -bottom-4 -right-4 bg-gold-500 text-navy-900 p-4 rounded-2xl shadow-lg border-2 border-white flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-2xl"></i>
+                        <div class="text-left">
+                            <p class="text-xs font-bold uppercase tracking-wider">Status</p>
+                            <p class="text-sm font-semibold">Siap Bekerja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Tentang Saya</h2>
+                <div class="w-12 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-7 space-y-5 text-slate-600 leading-relaxed">
+                    <p class="text-lg text-slate-700 font-medium">
+                        Saya merupakan lulusan S1 Teknik Sipil dari Universitas Bung Hatta dengan ketelitian tinggi, kemampuan analitis, dan semangat belajar yang kuat.
+                    </p>
+                    <p>
+                        Selama masa perkuliahan, saya terbiasa bekerja secara terstruktur, mengelola data, menyusun laporan teknis, serta menyelesaikan tugas sesuai target dan tenggat waktu yang ketat.
+                    </p>
+                    <p>
+                        Saya menguasai Microsoft Office (terutama Excel dan Word), memiliki kemampuan komunikasi yang efektif, serta adaptif dalam bekerja secara mandiri maupun berkolaborasi di dalam tim. Saya berkomitmen untuk terus berkembang dan memberikan kontribusi terbaik di lingkungan kerja profesional.
+                    </p>
+                </div>
+
+                <!-- Education Card -->
+                <div class="md:col-span-5">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full -mr-4 -mt-4"></div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-navy-900">Pendidikan Terakhir</h3>
+                                <p class="text-xs text-slate-500">2021 - 2025</p>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-800">Universitas Bung Hatta</h4>
+                        <p class="text-sm font-semibold text-gold-600 mt-0.5">S1 Teknik Sipil • IPK 3.41</p>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Judul Skripsi:</p>
+                            <p class="text-sm text-slate-700 italic bg-white p-3 rounded-lg border border-slate-200/80">
+                                "Pengaruh Penggunaan Serbuk Gypsum Sebagai Substitusi Filler Pada Campuran Aspal AC-BC"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & PROJECTS SECTION -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Pengalaman Kerja & Proyek</h2>
+                <div class="w-12 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+                <p class="text-slate-600 mt-4 text-sm">Pengalaman praktek dan kerja lapangan teknis yang pernah saya jalani.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: Hutama Karya -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-navy-900/5 text-navy-900 text-xs font-semibold border border-navy-900/10">
+                                Kerja Praktek
+                            </span>
+                            <span class="text-xs font-medium text-slate-500">
+                                <i class="fa-regular fa-building mr-1"></i> PT. Hutama Karya Infrastruktur
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Pengawasan & Pengendalian Proyek Jalan Tol</h3>
+                        <p class="text-sm text-slate-600 mb-6">
+                            Terlibat langsung dalam pengawasan teknis, kontrol mutu material, serta penyusunan laporan harian lapangan.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Mendokumentasikan progres harian pekerjaan secara terstruktur.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Membantu pengawasan pekerjaan tanah dan perkerasan jalan tol.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Mempelajari pengendalian mutu material sesuai spesifikasi teknis.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Membantu pengecekan elevasi dan pengukuran teknis di lapangan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                        <span class="font-medium text-slate-700">Manajemen Konstruksi & K3</span>
+                        <i class="fa-solid fa-helmet-safety text-gold-600 text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: Hisense -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-600 text-xs font-semibold border border-gold-500/20">
+                                Okt - Des 2025
+                            </span>
+                            <span class="text-xs font-medium text-slate-500">
+                                <i class="fa-regular fa-building mr-1"></i> PT Hisense International Indonesia
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Petugas Instalasi & Technical Support</h3>
+                        <p class="text-sm text-slate-600 mb-6">
+                            Bertanggung jawab terhadap inspeksi kualitas hardware, instalasi fisik, verifikasi operasional, dan pelatihan pengguna.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Pengecekan kondisi & kelengkapan Papan Tulis Digital Hisense (75WM61FE) & Standing Bracket.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Melakukan instalasi teknis perangkat digital secara presisi.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Melakukan pengecekan fungsi sesuai Berita Acara Pemeriksaan Pekerjaan (BAPP).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-gold-500 mt-1 text-xs"></i>
+                                <span>Memberikan training singkat penggunaan papan tulis digital kepada klien.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                        <span class="font-medium text-slate-700">Quality Checking & Training</span>
+                        <i class="fa-solid fa-display text-navy-900 text-base"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Keahlian & Kompetensi</h2>
+                <div class="w-12 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Hard Skills -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                    <h3 class="text-lg font-bold text-navy-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-laptop-code text-gold-500"></i> Hard Skills & Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-slate-700 font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-file-excel text-green-600"></i> Microsoft Excel
+                        </span>
+                        <span class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-slate-700 font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-file-word text-blue-600"></i> Microsoft Word
+                        </span>
+                        <span class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-slate-700 font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-file-powerpoint text-orange-600"></i> Microsoft Office
+                        </span>
+                        <span class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-slate-700 font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-navy-900"></i> Manajemen Data & Laporan
+                        </span>
+                        <span class="px-4 py-2 bg-white rounded-xl border border-slate-200 text-slate-700 font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-ruler-combined text-gold-600"></i> Pengukuran Lapangan
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                    <h3 class="text-lg font-bold text-navy-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-gold-500"></i> Soft Skills & Karakter
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-navy-900 text-white rounded-xl font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-gold-400"></i> Problem Solving
+                        </span>
+                        <span class="px-4 py-2 bg-navy-900 text-white rounded-xl font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-gold-400"></i> Teliti & Bertanggung Jawab
+                        </span>
+                        <span class="px-4 py-2 bg-navy-900 text-white rounded-xl font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-gold-400"></i> Komunikasi Efektif
+                        </span>
+                        <span class="px-4 py-2 bg-navy-900 text-white rounded-xl font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-users text-gold-400"></i> Kerja Sama Tim
+                        </span>
+                        <span class="px-4 py-2 bg-navy-900 text-white rounded-xl font-medium text-sm shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-gold-400"></i> Cepat Belajar & Adaptif
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Badge -->
+            <div class="mt-8 bg-gradient-to-r from-navy-900 to-navy-800 rounded-2xl p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-language text-gold-500 text-2xl"></i>
+                    <div>
+                        <h4 class="font-bold">Kemampuan Bahasa</h4>
+                        <p class="text-xs text-slate-300">Bahasa Indonesia (Penutur Asli / Native)</p>
+                    </div>
+                </div>
+                <span class="px-4 py-1.5 bg-gold-500 text-navy-900 rounded-full font-bold text-xs uppercase tracking-wider">
+                    Aktif & Efektif
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Hubungi Saya</h2>
+                <div class="w-12 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+                <p class="text-slate-600 mt-4 text-sm">Mari terhubung dan mendiskusikan peluang kerja sama profesional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Phone/WA -->
+                <a href="https://wa.me/62895357203070" target="_blank" class="bg-white p-6 rounded-2xl border border-slate-200 text-center hover:border-gold-500 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-green-50 text-green-600 flex items-center justify-center text-xl group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-sm">Telepon / WhatsApp</h3>
+                    <p class="text-xs text-slate-500 mt-1">0895357203070</p>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:tyofebrian01@gmail.com" class="bg-white p-6 rounded-2xl border border-slate-200 text-center hover:border-gold-500 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-sm">Email</h3>
+                    <p class="text-xs text-slate-500 mt-1">tyofebrian01@gmail.com</p>
+                </a>
+
+                <!-- Location -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-sm">Lokasi</h3>
+                    <p class="text-xs text-slate-500 mt-1">Padang, Sumatera Barat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-900 text-white py-8 border-t border-navy-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400">
+            <p>&copy; 2026 Muhammad Tyo Febrian. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
